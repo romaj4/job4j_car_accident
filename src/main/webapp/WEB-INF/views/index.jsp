@@ -7,10 +7,30 @@
     <title>Accident</title>
 </head>
 <body>
+    <nav class="navbar navbar-dark bg-secondary">
+        <div class="container">
+            <span class="navbar-brand mb-0 fs-2">CarAccident</span>
+        </div>
+    </nav>
     <div class="container">
-        <c:forEach var="user" items="${listUsers}">
-            <p class="fs-3">${user}</p>
-        </c:forEach>
+        <table class="table table-bordered table-striped fs-5 mt-5">
+            <thead>
+            <tr>
+                <th scope="col">Нарушение</th>
+                <th scope="col">Описание</th>
+                <th scope="col">Адрес</th>
+            </tr>
+            </thead>
+            <tbody>
+                <c:forEach var="accident" items="${listAccident}">
+                <tr>
+                    <td>${accident.name}</td>
+                    <td>${accident.text}</td>
+                    <td>${accident.address}</td>
+                </tr>
+                </c:forEach>
+            </tbody>
+        </table>
     </div>
 </body>
 </html>
