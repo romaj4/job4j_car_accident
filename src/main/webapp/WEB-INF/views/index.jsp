@@ -9,11 +9,12 @@
 <body>
     <nav class="navbar navbar-dark bg-secondary">
         <div class="container">
-            <span class="navbar-brand mb-0 fs-2">CarAccident</span>
+            <span class="navbar-brand mb-0 fs-3">CarAccident</span>
         </div>
     </nav>
     <div class="container">
-        <table class="table table-bordered table-striped fs-5 mt-5">
+        <a class="btn btn-secondary fs-5 m-4 float-end" href="<c:url value='/create'/>">Добавить инцидент</a>
+        <table class="table table-bordered table-striped fs-6 mt-3">
             <thead>
             <tr>
                 <th scope="col">Нарушение</th>
