@@ -10,7 +10,11 @@ import java.util.List;
 
 @Controller
 public class IndexControl {
-    AccidentService accidentService = new AccidentService();
+    private AccidentService accidentService;
+
+    public IndexControl(AccidentService accidentService) {
+        this.accidentService = accidentService;
+    }
 
     @GetMapping("/")
     public String index(Model model) {

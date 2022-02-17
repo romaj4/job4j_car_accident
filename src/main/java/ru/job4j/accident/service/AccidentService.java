@@ -9,7 +9,11 @@ import java.util.List;
 
 @Service
 public class AccidentService {
-    private AccidentMem accidentMem = new AccidentMem();
+    private AccidentMem accidentMem;
+
+    public AccidentService(AccidentMem accidentMem) {
+        this.accidentMem = accidentMem;
+    }
 
     public List<Accident> listAccident() {
         return new ArrayList<>(accidentMem.findAllAccidents());
