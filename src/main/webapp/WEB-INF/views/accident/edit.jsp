@@ -9,23 +9,23 @@
 <body>
 <nav class="navbar navbar-dark bg-secondary">
     <div class="container">
-        <span class="navbar-brand mb-0 fs-2">CarAccident</span>
+        <span class="navbar-brand mb-0 fs-3">CarAccident</span>
     </div>
 </nav>
 <div class="container mt-5">
-    <h2 class="text-center">Редактировать инцидент</h2>
-    <form class="fs-5" action="<c:url value='/edit'/>" method='POST'>
+    <h3 class="text-center">Редактировать инцидент</h3>
+    <form class="fs-5" action="<c:url value='/save?id=${accident.id}'/>" method='POST'>
         <div class="mb-3">
             <label for="name" class="form-label">Нарушение</label>
-            <input type="text" class="form-control" id="name" aria-describedby="emailHelp" name='name'>
+            <input type="text" class="form-control" id="name" aria-describedby="emailHelp" name='name' value="${accident.name}">
         </div>
         <div class="mb-3">
             <label for="text" class="form-label">Описание</label>
-            <input type="text" class="form-control" id="text" name='text'>
+            <input type="text" class="form-control" id="text" name='text' value="${accident.text}">
         </div>
         <div class="mb-3">
             <label for="address" class="form-label">Адрес</label>
-            <input type="text" class="form-control" id="address" name='address'>
+            <input type="text" class="form-control" id="address" name='address' value="${accident.address}">
         </div>
         <button type="submit" class="btn btn-secondary">Сохранить</button>
     </form>

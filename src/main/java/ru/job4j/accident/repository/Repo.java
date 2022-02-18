@@ -8,4 +8,6 @@ public interface Repo {
     Collection<Accident> findAllAccidents();
 
     void create(Accident accident);
+
+    Accident findById(int id);
 }

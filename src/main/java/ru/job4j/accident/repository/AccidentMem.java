@@ -32,4 +32,9 @@ public class AccidentMem implements Repo {
         }
         accidents.put(accident.getId(), accident);
     }
+
+    @Override
+    public Accident findById(int id) {
+        return accidents.get(id);
+    }
 }
