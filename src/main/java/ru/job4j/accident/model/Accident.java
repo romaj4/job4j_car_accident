@@ -11,10 +11,13 @@ public class Accident {
 
     private String address;
 
-    public Accident(String name, String text, String address) {
+    private AccidentType accidentType;
+
+    public Accident(String name, String text, String address, AccidentType accidentType) {
         this.name = name;
         this.text = text;
         this.address = address;
+        this.accidentType = accidentType;
     }
 
     public int getId() {
@@ -49,6 +52,14 @@ public class Accident {
         this.address = address;
     }
 
+    public AccidentType getAccidentType() {
+        return accidentType;
+    }
+
+    public void setAccidentType(AccidentType accidentType) {
+        this.accidentType = accidentType;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -68,6 +79,6 @@ public class Accident {
 
     @Override
     public String toString() {
-        return String.format("Accident: id=%s, name=%s, text=%s, address=%s", id, name, text, address);
+        return String.format("Accident: id=%s, name=%s, text=%s, address=%s, accidentType=%s", id, name, text, address, accidentType);
     }
 }

@@ -27,6 +27,15 @@
                 <label for="address" class="form-label">Адрес</label>
                 <input type="text" class="form-control" id="address" name='address'>
             </div>
+            <div class="mb-3">
+                <label for="accidentType" class="form-label">Тип нарушения</label>
+                <select class="form-select" name="accidentType.id" id="accidentType">
+                    <option selected>Выберите тип нарушения</option>
+                    <c:forEach var="type" items="${types}" >
+                        <option value="${type.id}">${type.name}</option>
+                    </c:forEach>
+                </select>
+            </div>
             <button type="submit" class="btn btn-secondary">Сохранить</button>
         </form>
     </div>

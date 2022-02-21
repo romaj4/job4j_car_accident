@@ -18,8 +18,9 @@
             <thead>
             <tr>
                 <th class="col-2" scope="col">Нарушение</th>
-                <th class="col-5" scope="col">Описание</th>
+                <th class="col-4" scope="col">Описание</th>
                 <th class="col-3" scope="col">Адрес</th>
+                <th class="col-2" scope="col">Тип нарушения</th>
                 <th class="col-1" scope="col">Редактировать</th>
             </tr>
             </thead>
@@ -29,6 +30,7 @@
                     <td>${accident.name}</td>
                     <td>${accident.text}</td>
                     <td>${accident.address}</td>
+                    <td>${accident.accidentType.name}</td>
                     <td><a class="btn btn-outline-secondary btn-sm" href="<c:url value='/edit?id=${accident.id}'/>">Редактировать</a></td>
                 </tr>
                 </c:forEach>
