@@ -28,6 +28,14 @@
             <input type="text" class="form-control" id="address" name='address' value="${accident.address}">
         </div>
         <div class="mb-3">
+            <label for="rule" class="form-label">Статья</label>
+            <select class="form-select" name="rIds" multiple id="rule">
+                <c:forEach var="rule" items="${rules}" >
+                    <option value="${rule.id}">${rule.name}</option>
+                </c:forEach>
+            </select>
+        </div>
+        <div class="mb-3">
             <label for="accidentType" class="form-label">Тип нарушения</label>
             <select class="form-select" name="accidentType.id" id="accidentType">
                 <c:forEach var="type" items="${types}" >
