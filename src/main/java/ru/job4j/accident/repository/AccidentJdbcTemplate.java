@@ -16,7 +16,6 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-@Repository
 public class AccidentJdbcTemplate implements Repo {
     private final JdbcTemplate jdbc;
 

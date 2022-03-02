@@ -11,13 +11,12 @@ CREATE TABLE if not exists accidents(
     name             varchar,
     text             varchar,
     address          varchar,
-    accident_type_id int references accident_types (id)    );
+    type_id int references accident_types (id)    );
 
 
-CREATE TABLE if not exists accidents_rules(
-    id serial primary key,
-    accidents_id int references accidents (id),
-    rules_id     int references rules (id));
+CREATE TABLE if not exists accident_rule(
+    accident_id int references accidents (id),
+    rule_id     int references rules (id));
 
 INSERT INTO accident_types (name) values ('Две машины');
 INSERT INTO accident_types (name) values ('Машина и человек');
