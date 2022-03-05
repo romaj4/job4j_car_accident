@@ -28,9 +28,11 @@ public class AccidentHibernate implements Repo {
 
     @Override
     public void create(Accident accident) {
-        try (Session session = sf.openSession()) {
-            session.saveOrUpdate(accident);
-        }
+        Session session = sf.openSession();
+        session.beginTransaction();
+        session.saveOrUpdate(accident);
+        session.getTransaction().commit();
+        session.close();
     }
 
     @Override
@@ -75,12 +77,6 @@ public class AccidentHibernate implements Repo {
             return (Rule) session.createQuery("from Rule  where id=:id")
                     .setParameter("id", id)
                     .uniqueResult();
-        }
-    }
-
-    public void addRules(Accident accident, String[] rIds) {
-        for (int i = 0; i < rIds.length; i++) {
-            accident.addRule(this.findRuleById(Integer.parseInt(rIds[i])));
         }
     }
 }
