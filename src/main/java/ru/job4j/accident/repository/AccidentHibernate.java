@@ -9,7 +9,6 @@ import ru.job4j.accident.model.Rule;
 
 import java.util.Collection;
 
-@Repository
 public class AccidentHibernate implements Repo {
 
     private final SessionFactory sf;

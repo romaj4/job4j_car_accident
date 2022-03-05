@@ -22,8 +22,7 @@ public class Accident {
     @JoinColumn(name = "type_id")
     private AccidentType accidentType;
 
-    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH,
-            CascadeType.REFRESH})
+    @ManyToMany(cascade = {CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
     @JoinTable(name = "accident_rule", joinColumns = @JoinColumn(name = "accident_id"),
             inverseJoinColumns = @JoinColumn(name = "rule_id"))
     private Set<Rule> rules = new HashSet<>();
