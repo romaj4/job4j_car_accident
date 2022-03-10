@@ -4,12 +4,14 @@
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <title>Accident</title>
 </head>
 <body>
     <nav class="navbar navbar-dark bg-secondary">
         <div class="container">
             <span class="navbar-brand mb-0 fs-3">CarAccident</span>
+            <span class="navbar-brand fs-4"><i class="bi bi-person"></i> ${user.username}</span>
         </div>
     </nav>
     <div class="container">
