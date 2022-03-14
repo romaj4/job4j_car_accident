@@ -10,9 +10,11 @@
 <nav class="navbar navbar-dark bg-secondary">
     <div class="container">
         <span class="navbar-brand mb-0 fs-3">CarAccident</span>
+        <a class="btn btn-outline-light fs-6" href="<c:url value='/reg'/>">Регистрация</a>
     </div>
 </nav>
-<div class="container mt-5">
+<div class="container mt-4">
+    <p class="text-center fs-2">Авторизация</p>
     <div class="col-6">
     <c:if test="${not empty errorMessage}">
         <div style="color:red; font-weight: bold; margin: 30px 0px;">

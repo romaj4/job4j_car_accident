@@ -11,7 +11,10 @@
     <nav class="navbar navbar-dark bg-secondary">
         <div class="container">
             <span class="navbar-brand mb-0 fs-3">CarAccident</span>
-            <span class="navbar-brand fs-4"><i class="bi bi-person"></i> ${user.username}</span>
+            <ul class="nav justify-content-end">
+                <span class="navbar-brand me-5 fs-5"><i class="bi bi-person"></i> ${user.username}</span>
+                <a class="btn btn-outline-light fs-5 btn-sm" href="<c:url value='/logout'/>">Выйти</a>
+            </ul>
         </div>
     </nav>
     <div class="container">
